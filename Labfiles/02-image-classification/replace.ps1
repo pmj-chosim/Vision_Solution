@@ -1,2 +1,2 @@
-$storageAcct = '<storageAccount>'
-(Get-Content training-images/training_labels.json) -replace '<storageAccount>', $storageAcct | Out-File training-images/training_labels.json
+$storageAcct = 'minjinee'
+(Get-Content training-images/training_labels.json) -replace 'minjine2', $storageAcct | Out-File training-images/training_labels.json

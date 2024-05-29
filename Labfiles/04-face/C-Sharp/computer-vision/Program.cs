@@ -23,13 +23,16 @@ namespace detect_people
                 string aiSvcKey = configuration["AIServiceKey"];
 
                 // Get image
-                string imageFile = "images/people.jpg";
+                string imageFile = "C:/Users/parkm/Desktop/Vision/mslearn-ai-vision/Labfiles/04-face/C-Sharp/computer-vision/images/people.jpg";
                 if (args.Length > 0)
                 {
                     imageFile = args[0];
                 }
 
                 // Authenticate Azure AI Vision client
+                var cvClient = new VisionServiceOptions(
+                aiSvcEndpoint,
+                new AzureKeyCredential(aiSvcKey));
 
                 
                 // Analyze image
